@@ -1,6 +1,8 @@
 pipeline {
     agent { label 'ubuntu' } // Ensure this runs on an Ubuntu node/agent
-
+    
+    echo "✅ Message from Jenkinsfile."
+    
     stages {
         stage('Clone Repository') {
             steps {
