@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Replace with your public repo URL
-                git branch: 'main', url: 'https://github.com/vikandula/vijay-devops.git'
+                git branch: 'main', url: 'https://github.com/octocat/Hello-World.git'
             }
         }
 
