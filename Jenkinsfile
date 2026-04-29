@@ -4,7 +4,7 @@ pipeline {
        stage('Checkout Code') {
            steps {
                // Clone the repository from Git
-               git branch: 'main', url: 'https://github.com/example/repo.git'
+               git branch: 'main', url: 'https://github.com/vikandula/vijay-devops.git'
            }
        }
        stage('Build') {
