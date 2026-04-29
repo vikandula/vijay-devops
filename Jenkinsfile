@@ -1,10 +1,7 @@
-pipeline {
-    agent any  // Run on any available agent
-    stages {
-        stage('Print Message') {
-            steps {
-                echo 'Hello from Jenkins Pipeline!'
-            }
-        }
+#!groovy
+
+node {
+    stage('Print Message') {
+        echo 'Hello from Jenkins Scripted Pipeline!'
     }
 }
