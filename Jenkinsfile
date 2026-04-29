@@ -1,32 +1,10 @@
 pipeline {
-    agent { label 'ubuntu' } // Ensure this runs on an Ubuntu node/agent
-    
-    echo "✅ Message from Jenkinsfile."
-    
+    agent any  // Run on any available agent
     stages {
-        stage('Clone Repository') {
+        stage('Print Message') {
             steps {
-                // Replace with your public repo URL
-                git branch: 'main', url: 'https://github.com/octocat/Hello-World.git'
+                echo 'Hello from Jenkins Pipeline!'
             }
-        }
-
-        stage('Zip Repository Files') {
-            steps {
-                script {
-                    // Create a zip of the entire workspace
-                    zip zipFile: 'repo.zip', archive: true, dir: '.'
-                }
-            }
-        }
-    }
-
-    post {
-        success {
-            echo "✅ Repository zipped and archived successfully."
-        }
-        failure {
-            echo "❌ Pipeline failed."
         }
     }
 }
